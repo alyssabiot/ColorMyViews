@@ -15,10 +15,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun setListeners() {
         val clickableViews: List<View> =
-            listOf(box_one_text, box_two_text, box_three_text,
+            listOf(
+                box_one_text, box_two_text, box_three_text,
                 box_four_text, box_five_text, constraint_layout,
-                red_button, yellow_button, green_button)
-        
+                red_button, yellow_button, green_button
+            )
+
         for (item in clickableViews) {
             item.setOnClickListener { makeColored(it) }
         }
@@ -26,8 +28,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun makeColored(view: View) {
         val boxes: List<View> =
-            listOf(box_one_text, box_two_text, box_three_text,
-                box_four_text, box_five_text)
+            listOf(
+                box_one_text, box_two_text, box_three_text,
+                box_four_text, box_five_text
+            )
 
         when (view.id) {
             // Boxes using Color class colors for background
